@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="EmployeeManagement.Common/EmployeeManagement.Common.csproj" />
+  <Project Path="EmployeeManagement.Data/EmployeeManagement.Data.csproj" Id="7ffa8fcf-35ed-4094-8647-064515b0fc18" />
+  <Project Path="EmployeeManagement.Logic/EmployeeManagement.Logic.csproj" Id="f3a86579-4385-4c7e-8908-4b201bccc036" />
+  <Project Path="EmployeeManagement.web/EmployeeManagement.web.csproj" Id="7777e22b-9a1c-4fe5-a160-30a39cafaf87" />
+</Solution>
