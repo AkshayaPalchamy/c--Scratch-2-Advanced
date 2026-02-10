@@ -1,2 +1,2 @@
 # c--Scratch-2-Advanced
-Learning about c# from scratch to advanced with enthisiastic projects
+Learning about c# from scratch to advanced with enthusiastic projects
