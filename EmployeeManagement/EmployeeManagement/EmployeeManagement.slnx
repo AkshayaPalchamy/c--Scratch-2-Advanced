@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="EmployeeDetails/EmployeeDetails.csproj" Id="a950eabd-3c32-4034-8238-b23f0cfd8711" />
   <Project Path="EmployeeManagement.Common/EmployeeManagement.Common.csproj" />
   <Project Path="EmployeeManagement.Data/EmployeeManagement.Data.csproj" Id="7ffa8fcf-35ed-4094-8647-064515b0fc18" />
   <Project Path="EmployeeManagement.Logic/EmployeeManagement.Logic.csproj" Id="f3a86579-4385-4c7e-8908-4b201bccc036" />

@@ -20,7 +20,26 @@ namespace EmployeeManagement.Data.DBContext
             if (!options.IsConfigured)
             {
                 options.UseSqlServer(
-                    "Server=(localdb)\\MSSQLLocalDB;Database=EmployeeDB;Trusted_Connection=True;TrustServerCertificate=True;");
+    "Server=localhost;Database=EmployeeDB;Trusted_Connection=True;Encrypt=False");
+            }
+
+            using (var Context = new EmployeeDBContext()) 
+            {
+                var Employee = new Employee()
+                {
+                    EmployeeName = "Akshaya",
+                    EmployeeEmail = "akshayapalchamy@gmail.com",
+                    DeparmentID = 1
+                };
+                Context.Employees.Add(Employee);
+                Context.SaveChanges();
+            }
+
+            using (var Context = new EmployeeDBContext()) 
+            {
+                var emp = Context.Employees.FirstOrDefault();
+
+                var devs = Context.Employees.Where(r => r.DeparmentID == 1).ToList();
             }
         }
     }
