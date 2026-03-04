@@ -1,0 +1,54 @@
+//Local Code
+
+using System;
+
+public class ReduceNumberToZero
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter the Input Value");
+        int nInput = int.Parse(Console.ReadLine());
+
+        int nSteps = 0;
+
+        while (nInput > 0) 
+        {
+            if (nInput % 2 == 0)
+            {
+                nInput = nInput / 2;
+            }
+            else
+            {
+                nInput = nInput - 1;
+            }
+            nSteps++;
+        }
+        Console.WriteLine(nSteps);
+    }
+}
+
+//LeetCode
+
+public class Solution 
+{
+    public int NumberOfSteps(int num) 
+    {
+        int nSteps = 0;
+
+        while (num > 0) 
+        {
+            if (num % 2 == 0)
+            {
+                num = num / 2;
+            }
+            else
+            {
+                num = num - 1;
+            }
+
+            nSteps++;
+        }
+
+        return nSteps;
+    }
+}
