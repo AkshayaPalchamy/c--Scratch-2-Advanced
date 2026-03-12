@@ -1,0 +1,69 @@
+local
+
+using System;
+
+public class RichestCustomer
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter the total number of customers:");
+        int nCustomers = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Enter the number of Accounts");
+        int nAccounts = int.Parse(Console.ReadLine());
+
+        int[,] nBalance = new int[nCustomers, nAccounts];
+
+        Console.WriteLine("Enter the account balance");
+
+        for (int i = 0; i < nCustomers; i++)
+        {
+            for (int j = 0; j < nAccounts; j++)
+            {
+                nBalance[i,j] = int.Parse(Console.ReadLine());
+            }
+        }
+
+        int MaxWealth = 0;
+        for (int i = 0; i < nCustomers; i++) 
+        {
+            int nSum = 0;
+            for (int j = 0; j < nCustomers; j++)
+            { 
+                nSum += nBalance[i,j];
+            }
+            if(nSum > MaxWealth)
+            {
+                MaxWealth = nSum;
+            }
+        }
+
+        Console.WriteLine("Richest Customer Wealth:" +MaxWealth);
+    }
+}
+
+leetcode
+public class Solution 
+{
+    public int MaximumWealth(int[][] accounts) 
+    {
+        int maxWealth = 0;
+
+        for(int i = 0; i < accounts.Length; i++)
+        {
+            int sum = 0;
+
+            for(int j = 0; j < accounts[i].Length; j++)
+            {
+                sum += accounts[i][j];
+            }
+
+            if(sum > maxWealth)
+            {
+                maxWealth = sum;
+            }
+        }
+
+        return maxWealth;
+    }
+}
